@@ -6,8 +6,7 @@
 
 ## 📁 API Structure
 
-- **Register API classes** in `api/api.ts`.
-- **Import controllers** in `api/index.ts`.
+- **Register API class** in `api/api.ts`.
 - **Controller files** located in `api/controllers/[controllerName]`.
 
 > Controllers should only send requests and return responses. Use stores for error handling and data processing.
