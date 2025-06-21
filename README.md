@@ -1,10 +1,8 @@
 # nuxt-pinia-vuetify-tailwind-template  
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/kazbekaskarov/nuxt-pinia-vuetify-tailwind-template/ci.yml?branch=main)](https://github.com/kazbekaskarov/nuxt-pinia-vuetify-tailwind-template/actions)  [![npm version](https://img.shields.io/npm/v/nuxt-pinia-vuetify-tailwind-template)](https://www.npmjs.com/package/nuxt-pinia-vuetify-tailwind-template)  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 
-**A high-performance Nuxt.js starter template integrated with Pinia, Vuetify, and Tailwind CSS.**
-
-Built for rapid prototyping, SSR/SSG support, TypeScript out of the box, and an optimized developer experience.
+**Nuxt.js starter template integrated with Pinia, Vuetify, and Tailwind CSS.**
 
 ---
 
@@ -68,7 +66,6 @@ Build and run in production:
 npm run build
 npm run start
 ```  
-Preview documentation (if available): `npm run docs:dev`.
 
 ---
 
@@ -92,7 +89,7 @@ api/
 
 ## 🧩 Components
 
-All `.vue` components in the `components/` directory are auto-registered.  
+All `.vue` components in the `components/` directory are auto-imported.  
 
 To add additional directories for auto-import:
 ```js
@@ -107,18 +104,12 @@ export default {
 
 ---
 
-## 📄 Pages & Routing
+## 📄 Pages
 
-Nuxt automatically creates routes based on the file structure in `pages/`.
+Pages for development:
+- `pages/dev/icons-list.vue` —  icon list .  
+- `pages/dev/routes.vue` — route list.
 
-Demo pages for development:
-- `pages/dev/icons-list.vue` — configurable icon list preview.  
-- `pages/dev/routes.vue` — visual route mapping demo.
-
-Example mapping:
-```text
-/pages/dev/routes.vue  →  http://localhost:3000/dev/routes
-```  
 
 ---
 
@@ -132,6 +123,8 @@ assets/icons/
 └─ ...
 ```
 
+use <nuxt-icon filled name="001/001" />
+
 <details>
 <summary>Icons preview example</summary>
 
@@ -143,43 +136,6 @@ Configure icon paths and display in `pages/dev/icons-list.vue`.
 
 ---
 
-## 🔧 Composables
-
-All files in the `composables/` directory are auto-imported.
-
-### Example `useFetch` composable:
-```ts
-// composables/useFetch.ts
-import { ref } from 'vue';
-export function useFetch<T>(url: string) {
-  const data = ref<T | null>(null);
-  const error = ref<Error | null>(null);
-  const loading = ref(false);
-
-  async function fetchData() {
-    loading.value = true;
-    try {
-      data.value = await $fetch<T>(url);
-    } catch (e) {
-      error.value = e as Error;
-    } finally {
-      loading.value = false;
-    }
-  }
-
-  return { data, error, loading, fetchData };
-}
-```
-
-Use in a component:
-```vue
-<script setup lang="ts">
-const { data, fetchData, loading, error } = useFetch<User>('/api/users');
-fetchData();
-</script>
-```
-
----
 
 ## 🗄️ Stores (Pinia)
 
