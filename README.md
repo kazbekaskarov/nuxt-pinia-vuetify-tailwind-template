@@ -25,7 +25,6 @@
       // { path: '~/single-use/test', pathPrefix: true, prefix: 'test' },
     ],
   }
- js```
 
 ## 📄 Страницы и роутинг (Pages)
 
