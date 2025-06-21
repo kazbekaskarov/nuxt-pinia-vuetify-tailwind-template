@@ -19,7 +19,6 @@
 - [🗄️ Stores (Pinia)](#-stores-pinia)
 - [📑 Contributing](#-contributing)
 - [📜 License](#-license)
-- [📝 Changelog](#-changelog)
 
 ---
 
@@ -27,11 +26,10 @@
 
 - **Nuxt.js SSR/SSG** — flexible page and API generation.
 - **Pinia** — lightweight yet powerful state management.  
-- **Vuetify** — ready-to-use Material Design components.  
+- **Vuetify** — ready-to-use components.  
 - **Tailwind CSS** — utility-first styling.  
 - **TypeScript** — strict typing support.  
 - **ESLint & Prettier** — consistent code style and automated formatting.  
-- **Auto-import** of components, composables, and stores.
 
 ---
 
@@ -121,16 +119,11 @@ assets/icons/
 ├─ 001/001.svg
 ├─ 001/002.svg
 └─ ...
+
+<nuxt-icon filled name="001/001" />
 ```
 
-use <nuxt-icon filled name="001/001" />
 
-<details>
-<summary>Icons preview example</summary>
-
-![Icons preview](./docs/icons-preview.png)
-
-</details>
 
 Configure icon paths and display in `pages/dev/icons-list.vue`.
 
@@ -180,16 +173,24 @@ user.loadUser();
 
 ## 📑 Contributing
 
-Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on contributing, issue reporting, and pull requests.
+Interested in contributing? Please follow our guidelines:
+
+Fork the repository.
+
+Create a new branch (git checkout -b feature/YourFeature).
+
+Commit your changes (git commit -m "feat: Describe your feature").
+
+Push to the branch (git push origin feature/YourFeature).
+
+Open a pull request.
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License. 
 
 ---
 
-## 📝 Changelog
 
-See [CHANGELOG.md](./CHANGELOG.md) for a list of changes and version history.
