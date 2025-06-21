@@ -1,0 +1,47 @@
+.v-text-field .v-field__overlay,
+.v-file-input .v-field__overlay,
+.v-text-field .v-field__outline,
+.v-file-input .v-field__outline,
+.v-checkbox .v-input__details {
+  display: none !important;
+}
+.v-label.v-field-label {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.v-field__input {
+  padding-left: 0px !important;
+}
+.v-field--appended {
+  padding-right: 0px !important;
+}
+.shimmer {
+  transform: translateX(-100%);
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.nuxt-icon svg {
+  height: unset !important;
+  width: unset !important;
+  margin-bottom: 0 !important;
+}
+
+.Vue-Toastification__toast--success {
+  background: #219653 !important;
+}
+
+.Vue-Toastification__toast-body {
+  display: flex;
+  align-items: center;
+}
+
+.v-snackbar__content {
+  background: #2aa65c !important;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+}
