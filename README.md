@@ -1,4 +1,3 @@
-```markdown
 # nuxt-pinia-vuetify-tailwind-template
 
 **Шаблон проекта на базе Nuxt.js с интеграцией Pinia, Vuetify и Tailwind CSS для быстрого старта.**
