@@ -48,5 +48,5 @@ Place store files in stores/[storeName].ts.
 
 It’s recommended to match the store name with the controller name for clarity.
 
-Handle business logic (errors, data transformations) inside stores — use store methods and state in Vue templates instead of calling API in components.
+> Handle business logic (errors, data transformations) inside stores — use store methods and state in Vue templates instead of calling API in components.
 
