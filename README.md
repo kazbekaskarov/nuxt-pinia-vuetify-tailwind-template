@@ -1,75 +1,63 @@
-# Nuxt 3 Minimal Starter
+```markdown
+# nuxt-pinia-vuetify-tailwind-template
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**Шаблон проекта на базе Nuxt.js с интеграцией Pinia, Vuetify и Tailwind CSS для быстрого старта.**
 
-## Setup
+---
 
-Make sure to install the dependencies:
+## 📁 Структура API
 
-```bash
-# npm
-npm install
+- **Регистрация классов API** в `api/api.ts`.
+- **Импорт контроллеров** в `api/index.ts`.
+- **Расположение контроллеров**: `api/controllers/[controllerName]`.
 
-# pnpm
-pnpm install
+> В контроллерах отправляется только запрос и возвращается ответ. Для обработки ошибок и работы с данными используйте сторы.
 
-# yarn
-yarn install
+---
 
-# bun
-bun install
+## 🧩 Компоненты
+
+- Все компоненты в папке `components/` подключаются автоматически.
+- При необходимости можно добавить другие директории автоподгрузки в `nuxt.config.ts`:
+  ```js
+  export default {
+    components: [
+      { path: '~/components', pathPrefix: true },
+      // { path: '~/single-use/test', pathPrefix: true, prefix: 'test' },
+    ],
+  }
+ ```
+
+## 📄 Страницы и роутинг (Pages)
+
+Используется автороутинг Nuxt по файлам в pages/.
+
+Для разработки доступны демо-файлы:
+
+pages/dev/icons-list.vue — просмотр и настройка списка иконок.
+
+pages/dev/routes.vue — пример конфигурации роутов.
+
+## 🎨 Иконки
+
+Иконки лежат в assets/icons/ и должны иметь цифровую нумерацию:
+
+assets/icons/001/001.svg
+assets/icons/002/002.svg
+
+При необходимости настройте путь и отображение в pages/dev/icons-list.vue.
+
+## 🔧 Composables
+
+Все функции из папки composables/ подгружаются автоматически.
+
+## 🗄️ Сторы (Pinia)
+
+Размещайте файлы в stores/[storeName].ts.
+
+Рекомендуется, чтобы имя стора совпадало с именем контроллера для лучшей читаемости.
+
+В сторе обрабатывайте логику (хэндлинг ошибок, трансформация данных) — в шаблонах Vue обращайтесь только к методам и состоянию стора.
+
+Создано с ❤️ Kazbek Askarov
 ```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
