@@ -1,23 +1,23 @@
 # nuxt-pinia-vuetify-tailwind-template
 
-**Шаблон проекта на базе Nuxt.js с интеграцией Pinia, Vuetify и Tailwind CSS для быстрого старта.**
+**A Nuxt.js starter template integrated with Pinia, Vuetify, and Tailwind CSS.**
 
 ---
 
-## 📁 Структура API
+## 📁 API Structure
 
-- **Регистрация классов API** в `api/api.ts`.
-- **Импорт контроллеров** в `api/index.ts`.
-- **Расположение контроллеров**: `api/controllers/[controllerName]`.
+- **Register API classes** in `api/api.ts`.
+- **Import controllers** in `api/index.ts`.
+- **Controller files** located in `api/controllers/[controllerName]`.
 
-> В контроллерах отправляется только запрос и возвращается ответ. Для обработки ошибок и работы с данными используйте сторы.
+> Controllers should only send requests and return responses. Use stores for error handling and data processing.
 
 ---
 
-## 🧩 Компоненты
+## 🧩 Components
 
-- Все компоненты в папке `components/` подключаются автоматически.
-- При необходимости можно добавить другие директории автоподгрузки в `nuxt.config.ts`:
+- All components in the `components/` folder are auto-registered.
+- To enable auto-import from other directories, configure `nuxt.config.ts`:
   ```js
   export default {
     components: [
@@ -26,35 +26,28 @@
     ],
   }
 
-## 📄 Страницы и роутинг (Pages)
+📄 Pages
 
-Используется автороутинг Nuxt по файлам в pages/.
+Pages for development:
 
-Для разработки доступны демо-файлы:
+pages/dev/icons-list.vue — icon list.
 
-pages/dev/icons-list.vue — просмотр и настройка списка иконок.
+pages/dev/routes.vue — pages list.
 
-pages/dev/routes.vue — пример конфигурации роутов.
+🎨 Icons
 
-## 🎨 Иконки
-
-Иконки лежат в assets/icons/ и должны иметь цифровую нумерацию:
+Store icons in assets/icons/ with numeric folders and filenames:
 
 assets/icons/001/001.svg
 assets/icons/002/002.svg
 
-При необходимости настройте путь и отображение в pages/dev/icons-list.vue.
+Customize icon paths and display in pages/dev/icons-list.vue as needed.
 
-## 🔧 Composables
+🗄️ Stores (Pinia)
 
-Все функции из папки composables/ подгружаются автоматически.
+Place store files in stores/[storeName].ts.
 
-## 🗄️ Сторы (Pinia)
+It’s recommended to match the store name with the controller name for clarity.
 
-Размещайте файлы в stores/[storeName].ts.
-
-Рекомендуется, чтобы имя стора совпадало с именем контроллера для лучшей читаемости.
-
-В сторе обрабатывайте логику (хэндлинг ошибок, трансформация данных) — в шаблонах Vue обращайтесь только к методам и состоянию стора.
-
+Handle business logic (errors, data transformations) inside stores — use store methods and state in Vue templates instead of calling API in components.
 
