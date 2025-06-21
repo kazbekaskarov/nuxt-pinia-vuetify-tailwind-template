@@ -26,7 +26,7 @@
     ],
   }
 
-📄 Pages
+## 📄 Pages
 
 Pages for development:
 
@@ -34,7 +34,7 @@ pages/dev/icons-list.vue — icon list.
 
 pages/dev/routes.vue — pages list.
 
-🎨 Icons
+## 🎨 Icons
 
 Store icons in assets/icons/ with numeric folders and filenames:
 
@@ -43,7 +43,7 @@ assets/icons/002/002.svg
 
 Customize icon paths and display in pages/dev/icons-list.vue as needed.
 
-🗄️ Stores (Pinia)
+## 🗄️ Stores (Pinia)
 
 Place store files in stores/[storeName].ts.
 
