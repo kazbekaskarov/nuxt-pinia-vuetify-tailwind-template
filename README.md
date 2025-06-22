@@ -129,7 +129,7 @@ Configure icon paths and display in `pages/dev/icons-list.vue`.
 ---
 
 
-## 🗄️ Stores (Pinia)
+## 🗄️ Stores
 
 Store directory:
 ```
