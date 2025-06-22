@@ -13,10 +13,9 @@
 - [🚀 Usage](#-usage)
 - [📁 API Structure](#-api-structure)
 - [🧩 Components](#-components)
-- [📄 Pages & Routing](#-pages--routing)
+- [📄 Pages](#-pages)
 - [🎨 Icons](#-icons)
-- [🔧 Composables](#-composables)
-- [🗄️ Stores (Pinia)](#-stores-pinia)
+- [🗄️ Stores](#-stores)
 - [📑 Contributing](#-contributing)
 - [📜 License](#-license)
 
