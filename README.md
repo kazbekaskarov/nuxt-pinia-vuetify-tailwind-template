@@ -9,13 +9,13 @@
 ## 📋 Table of Contents
 
 - [✨ Features](#-features)
-- [⚙️ Installation](#-installation)
+- [⚙️ Installation](#%EF%B8%8F-installation)
 - [🚀 Usage](#-usage)
 - [📁 API Structure](#-api-structure)
 - [🧩 Components](#-components)
 - [📄 Pages](#-pages)
 - [🎨 Icons](#-icons)
-- [🗄️ Stores](#-stores)
+- [🗄️ Stores](#%EF%B8%8F-stores)
 - [📑 Contributing](#-contributing)
 - [📜 License](#-license)
 
